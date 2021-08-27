@@ -3,7 +3,7 @@ import webbrowser
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 from random import randint
 
-from ox_api_cli.client.client_core import OXApiClient
+from .client_core import OXApiClient
 
 
 class BrowserLogin():
