@@ -57,7 +57,7 @@ class OXApiClient:
             self.access_token = self._oauth_session.fetch_access_token(self.base_authorization_url + '/api/index/token',
                                                                        response['oauth_verifier'])
         else:
-            from ox_api_cli.client.browser_login import BrowserLogin
+            from .browser_login import BrowserLogin
             blogin = BrowserLogin(self)
             blogin.interactive_login()
         self._oauth_session.headers.update({'content-type': 'application/json', 'accept': 'application/json'})
